@@ -1,5 +1,13 @@
-const testVar = {}
+const records = [
+  {year: "2018", result: "L"},
+  {year: "2017", result: "W"},
+  {year: "2016", result: "N/A"}
+]
 
-function testFunc() {
-  return "hi"
+function superbowlWin(records) {
+  let result = records.find(record => record.result === 'W');
+  // console.log(result ? result.year : undefined)
+  return result ? result.year : undefined;
 }
+
+superbowlWin(records);
